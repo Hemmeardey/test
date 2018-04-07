@@ -1,8 +1,11 @@
 package edu.handong.csee.java.array.sort;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class ArraySorter {
+	
+	static Scanner myKeyboard;
 	
 	int[] numbers;
 
@@ -10,24 +13,36 @@ public class ArraySorter {
 		
 		ArraySorter arraySorter = new ArraySorter();
 		
+		myKeyboard = new Scanner(System.in);
+		
 		arraySorter.getNumbers();
 		arraySorter.runSelectionSort();
 		arraySorter.printSortingResult();
+		
+		arraySorter.getNumbers();
+		arraySorter.runBuiltInSort();
+		arraySorter.printSortingResult();
+		
+		myKeyboard.close();
 
 	}
 	
+	private void runBuiltInSort() {
+		Arrays.sort(numbers);
+	}
+
 	private void printSortingResult() {
 		System.out.println("Array values after sorting:");
 		for(int i=0; i < numbers.length;i++){
 			System.out.print(numbers[i] + " ");
 		}
+		System.out.println();
 	}
 
 	public void getNumbers(){
 		
-		Scanner myKeyboard = new Scanner(System.in);
-		
 		System.out.print("How many numbers do you want to sort?: ");
+		
 		int numOfNumbers = myKeyboard.nextInt();
 		
 		numbers = new int[numOfNumbers];
@@ -42,8 +57,6 @@ public class ArraySorter {
 		}
 		
 		System.out.println("\n");
-		
-		myKeyboard.close();
 	}
 	
 	public void runSelectionSort() {
