@@ -12,11 +12,11 @@ public class ArraySorter {
 		
 		arraySorter.getNumbers();
 		arraySorter.runSelectionSort();
-		arraySorter.printSrotingResult();
+		arraySorter.printSortingResult();
 
 	}
 	
-	private void printSrotingResult() {
+	private void printSortingResult() {
 		System.out.println("Array values after sorting:");
 		for(int i=0; i < numbers.length;i++){
 			System.out.print(numbers[i] + " ");
