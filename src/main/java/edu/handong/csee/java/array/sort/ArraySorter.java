@@ -11,20 +11,27 @@ public class ArraySorter {
 
 	public static void main(String[] args) {
 		
+		// As a Java programmer, I do not like to put any logic in the main method.
+		// I just instantiate the first object and call the method that can start my program logic.
 		ArraySorter arraySorter = new ArraySorter();
+		arraySorter.run();
+
+	}
+	
+	public void run() {
 		
 		myKeyboard = new Scanner(System.in);
 		
-		arraySorter.getNumbers();
-		arraySorter.runSelectionSort();
-		arraySorter.printSortingResult();
+		getNumbers();
+		runSelectionSort();
+		printSortingResult();
 		
-		arraySorter.getNumbers();
-		arraySorter.runBuiltInSort();
-		arraySorter.printSortingResult();
+		getNumbers();
+		runBuiltInSort();
+		printSortingResult();
 		
 		myKeyboard.close();
-
+		
 	}
 	
 	private void runBuiltInSort() {
