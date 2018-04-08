@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class ArraySorter {
 	
-	static Scanner myKeyboard;
+	private Scanner myKeyboard;
 	
 	int[] numbers;
 
